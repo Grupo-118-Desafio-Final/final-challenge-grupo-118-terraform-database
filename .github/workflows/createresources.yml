@@ -1,0 +1,28 @@
+name: Create Terraform Resources
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+#       - develop
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  deploy:
+    uses: Grupo-118-Desafio-Final/final-challenge-grupo-118-template-pipeline/.github/workflows/terraform-template-creation-resource.yml@main
+    with:
+      terraform_var_mapping: |
+        {
+          "admin_login": "TF_MONGODB_ADMIN_LOGIN",
+          "admin_password": "TF_MONGODB_ADMIN_PASSWORD",
+          "client_ip": "TF_SQL_CLIENT_IP",
+          "atlas_org_id":"TF_MONGODB_ATLAS_ORG_ID",
+          "mongodb_atlas_public_key":"TF_MONGODB_ATLAS_PUBLIC_KEY",
+          "mongodb_atlas_private_key":"TF_MONGODB_ATLAS_PRIVATE_KEY"
+        }
+    secrets: inherit 
