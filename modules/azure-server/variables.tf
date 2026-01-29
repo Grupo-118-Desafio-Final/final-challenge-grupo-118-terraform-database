@@ -23,3 +23,8 @@ variable "location" {
   description = "The Azure region where the container registry will be created."
   type        = string
 }
+
+variable "client_ip" {
+  type        = string
+  description = "Client IP"
+}

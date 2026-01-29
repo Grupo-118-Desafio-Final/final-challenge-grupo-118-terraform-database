@@ -54,6 +54,7 @@ module "sql_server" {
   location            = module.infra_database_resource_group.location
   admin_login         = var.admin_login
   admin_password      = var.admin_password
+  client_ip           = var.client_ip
 }
 # endregion
 

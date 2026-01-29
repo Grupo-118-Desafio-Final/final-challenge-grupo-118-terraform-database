@@ -73,4 +73,8 @@ variable "sku_name" {
   default     = "S0"
 }
 
+variable "client_ip" {
+  type        = string
+  description = "Client IP para liberar no firewall"
+}
 #endregion
