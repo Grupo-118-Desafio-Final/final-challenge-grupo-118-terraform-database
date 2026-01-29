@@ -40,3 +40,37 @@ variable "billing_domain" {
   default = "billing"
 }
 #endregion
+
+#region Users and Plans
+
+variable "resource_group_name" {
+  description = "The name of the resource group where resources will be created"
+  type        = string
+  default     = "final-challenge-grupo-118-rg"
+}
+
+variable "resource_group_location" {
+  description = "The Azure region where resources will be created"
+  type        = string
+  default     = "eastus2"
+}
+
+variable "server_name" {
+  type        = string
+  description = "SQL Server Name"
+  default     = "final-challenge-grupo-118-sqlserver"
+}
+
+variable "keycloak_database_name" {
+  type        = string
+  description = "Nome do banco de dados do Keycloak"
+  default     = "final-challenge-grupo-118-keycloak"
+}
+
+variable "sku_name" {
+  type        = string
+  description = "Sku Name"
+  default     = "S0"
+}
+
+#endregion
