@@ -1,5 +1,5 @@
 # Introduction
-Repository to create the MongoDB for the Kubernetes API usage.
+Repository to create the MongoDB and SQL Server for the Kubernetes API usage.
 
 ## Create Token on HCP platform
 
