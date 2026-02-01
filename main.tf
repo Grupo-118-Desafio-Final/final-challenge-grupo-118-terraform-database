@@ -44,3 +44,31 @@ module "keycloak_database" {
   sku_name  = var.sku_name
 }
 #endregion
+
+#region Redis Cache
+
+module "redis_cache" {
+  source              = "./modules/azure-redis-cache"
+  resource_group_name = module.infra_database_resource_group.name
+  location            = module.infra_database_resource_group.location
+}
+
+output "redis_hostname" {
+  value = module.redis_cache.redis_hostname
+}
+
+output "redis_port" {
+  value = module.redis_cache.redis_port
+}
+
+output "redis_primary_access_key" {
+  value     = module.redis_cache.redis_primary_access_key
+  sensitive = true
+}
+
+output "redis_primary_connection_string" {
+  value     = module.redis_cache.redis_primary_connection_string
+  sensitive = true
+}
+
+#endregion
