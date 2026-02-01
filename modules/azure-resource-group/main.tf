@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "group118fase3infradatabaserg" {
+resource "azurerm_resource_group" "grupo118finalchallengeinfradatabaserg" {
   name     = var.name
   location = var.location
 }
