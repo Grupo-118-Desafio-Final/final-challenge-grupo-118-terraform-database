@@ -61,10 +61,10 @@ variable "server_name" {
   default     = "final-challenge-grupo-118-sqlserver"
 }
 
-variable "keycloak_database_name" {
+variable "backoffice_database_name" {
   type        = string
-  description = "Nome do banco de dados do Keycloak"
-  default     = "final-challenge-grupo-118-keycloak"
+  description = "Nome do banco de dados do Backoffice"
+  default     = "final-challenge-grupo-118-backoffice"
 }
 
 variable "sku_name" {

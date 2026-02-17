@@ -36,10 +36,10 @@ module "sql_server" {
 }
 # endregion
 
-#region Keycloak Database
-module "keycloak_database" {
+#region Backoffice Database
+module "backoffice_database" {
   source    = "./modules/azure-database"
-  name      = var.keycloak_database_name
+  name      = var.backoffice_database_name
   server_id = module.sql_server.id
   sku_name  = var.sku_name
 }
