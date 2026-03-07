@@ -46,7 +46,7 @@ variable "billing_domain" {
 variable "resource_group_name" {
   description = "The name of the resource group where resources will be created"
   type        = string
-  default     = "final-challenge-grupo-118-rg"
+  default     = "final-challange-grupo-118-db-rg"
 }
 
 variable "resource_group_location" {
@@ -61,10 +61,10 @@ variable "server_name" {
   default     = "final-challenge-grupo-118-sqlserver"
 }
 
-variable "keycloak_database_name" {
+variable "backoffice_database_name" {
   type        = string
-  description = "Nome do banco de dados do Keycloak"
-  default     = "final-challenge-grupo-118-keycloak"
+  description = "Nome do banco de dados do Backoffice"
+  default     = "final-challenge-grupo-118-backoffice"
 }
 
 variable "sku_name" {

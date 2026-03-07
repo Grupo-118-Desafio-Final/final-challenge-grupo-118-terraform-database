@@ -12,3 +12,8 @@ output "infra_database_resource_group_location" {
   value       = module.infra_database_resource_group.location
   description = "The location of the resource group created by the module"
 }
+
+output "videos_mongo_connection_strings" {
+  value       = module.mongodb_atlas_videos.cluster_connection_strings
+  description = "The connection strings for the videos mongo cluster"
+}
