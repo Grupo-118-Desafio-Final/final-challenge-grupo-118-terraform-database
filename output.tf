@@ -14,6 +14,6 @@ output "infra_database_resource_group_location" {
 }
 
 output "videos_mongo_connection_strings" {
-  value = module.mongodb_atlas_videos.cluster_connection_strings
+  value       = module.mongodb_atlas_videos.cluster_connection_strings
   description = "The connection strings for the videos mongo cluster"
 }
